@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include kifaru *.css
+recursive-include kifaru *.csv
+recursive-include kifaru *.html
+recursive-include kifaru *.ico
+recursive-include kifaru *.js
+recursive-include kifaru *.json
+recursive-include kifaru *.md
+recursive-include kifaru *.png
+recursive-include kifaru *.py
+recursive-include kifaru *.svg
+recursive-include kifaru *.txt
+recursive-exclude kifaru *.pyc
