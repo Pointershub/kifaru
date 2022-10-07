@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{naming_series}{unit_no}",
+ "creation": "2022-09-26 20:26:54.760448",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project_name",
+  "unit_category",
+  "unit_no",
+  "column_break_4",
+  "unit_description",
+  "unit_cost",
+  "status",
+  "reservation_details_section",
+  "reservation_status",
+  "reserved_by",
+  "column_break_12",
+  "reservation_date",
+  "reservation_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Link",
+   "label": "Project Name",
+   "options": "Property Projects"
+  },
+  {
+   "fieldname": "unit_category",
+   "fieldtype": "Link",
+   "label": "Unit Category",
+   "options": "Unit Category"
+  },
+  {
+   "fieldname": "unit_no",
+   "fieldtype": "Data",
+   "label": "Unit No"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "unit_category.unit_description",
+   "fieldname": "unit_description",
+   "fieldtype": "Read Only",
+   "label": "Unit Description"
+  },
+  {
+   "fieldname": "unit_cost",
+   "fieldtype": "Currency",
+   "label": "Unit Cost"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nAvailable\nBooked\nReserved",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "\nK\nR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reservation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Reservation Details"
+  },
+  {
+   "fieldname": "reservation_status",
+   "fieldtype": "Data",
+   "label": "Reservation Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reserved_by",
+   "fieldtype": "Link",
+   "label": "Reserved By",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reservation_date",
+   "fieldtype": "Date",
+   "label": "Reservation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reservation_no",
+   "fieldtype": "Link",
+   "label": "Reservation No",
+   "options": "Property Reservation",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-09-27 21:54:05.061949",
+ "modified_by": "Administrator",
+ "module": "Kifaru",
+ "name": "Property Unit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

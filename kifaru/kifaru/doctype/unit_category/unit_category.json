@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:unit_category",
+ "creation": "2022-09-26 16:39:33.300637",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "unit_category",
+  "unit_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit_category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit Category ",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "unit_description",
+   "fieldtype": "Data",
+   "label": "Unit Description",
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2022-09-26 16:54:02.858115",
+ "modified_by": "Administrator",
+ "module": "Kifaru",
+ "name": "Unit Category",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Kifaru Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "unit_category"
+}
