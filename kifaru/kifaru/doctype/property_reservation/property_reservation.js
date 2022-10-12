@@ -6,10 +6,19 @@ frappe.ui.form.on('Property Reservation', {
           frm.set_query("unit_no", function () {
               return {
                   "filters": [
-                      // ["Property Unit", "reservation_status", "=", "Available"],
                       ["Property Unit", "status", "=", "Available"]
                   ]
               }
           });
-      }
+      },
+    refresh: function(frm){
+          if(frm.doc.docstatus == 1){
+              frm.add_custom_button(__("Property Allocation"), function() {
+			            frappe.set_route("Form", "Property Allocation",
+			                {
+			                    "reservation_no": frm.doc.name
+			                });
+			            }, __("Create")).addClass("btn-primary");
+          }
+    }
 });

@@ -186,3 +186,45 @@ user_data_fields = [
 # Recommended only for DocTypes which have limited documents with untranslated names
 # For example: Role, Gender, etc.
 # translated_search_doctypes = []
+
+fixtures = [
+
+    {
+        "doctype": "Custom Field",
+        "filters": [["name", "in", (
+            "Property Reservation-workflow_state",
+			"Customer-passport_no",
+			"Customer-national_id",
+			"Property Allocation-workflow_state"
+
+        )]]
+    },
+    {
+        "doctype": "Workflow",
+        "filters": [["document_type", "in", (
+            "Property Allocation",
+			"Property Reservation"
+        )]],
+    },
+    {
+        "doctype": "Workflow State",
+        "filters": [["name", "in", (
+
+            "Rejected",
+            "Booked",
+            "Revoked",
+            "Draft",
+			"Allocated"
+        )]],
+    },
+    {
+        "doctype": "Workflow Action Master",
+        "filters": [["name", "in", (
+            "Reject",
+            "Allocate",
+            "Revoke",
+			"Reserve"
+        )]],
+    }
+
+]

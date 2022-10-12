@@ -20,7 +20,12 @@
   "reserved_by",
   "column_break_12",
   "reservation_date",
-  "reservation_no"
+  "reservation_no",
+  "allocation_details_section",
+  "allocated_to",
+  "column_break_17",
+  "allocation_date",
+  "allocation_no"
  ],
  "fields": [
   {
@@ -71,6 +76,7 @@
    "reqd": 1
   },
   {
+   "collapsible": 1,
    "fieldname": "reservation_details_section",
    "fieldtype": "Section Break",
    "label": "Reservation Details"
@@ -104,11 +110,41 @@
    "label": "Reservation No",
    "options": "Property Reservation",
    "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "allocation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Allocation Details"
+  },
+  {
+   "fieldname": "allocated_to",
+   "fieldtype": "Link",
+   "label": "Allocated To",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "allocation_date",
+   "fieldtype": "Date",
+   "label": "Allocation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocation_no",
+   "fieldtype": "Link",
+   "label": "Allocation No",
+   "options": "Property Allocation",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-27 21:54:05.061949",
+ "modified": "2022-10-12 19:31:17.583136",
  "modified_by": "Administrator",
  "module": "Kifaru",
  "name": "Property Unit",

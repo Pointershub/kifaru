@@ -1,0 +1,210 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Property Reservation",
+  "is_active": 1,
+  "modified": "2022-09-27 21:58:06.218873",
+  "name": "Property Reservation",
+  "override_status": 0,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 1,
+  "states": [
+   {
+    "allow_edit": "All",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Reservation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Draft",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "All",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Reservation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Rejected",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "All",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Reservation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Booked",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Kifaru Admin",
+    "doc_status": "2",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Reservation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Revoked",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Reserve",
+    "allow_self_approval": 1,
+    "allowed": "All",
+    "condition": null,
+    "next_state": "Booked",
+    "parent": "Property Reservation",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft"
+   },
+   {
+    "action": "Revoke",
+    "allow_self_approval": 1,
+    "allowed": "Kifaru Admin",
+    "condition": null,
+    "next_state": "Revoked",
+    "parent": "Property Reservation",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Booked"
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "All",
+    "condition": null,
+    "next_state": "Rejected",
+    "parent": "Property Reservation",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft"
+   }
+  ],
+  "workflow_name": "Property Reservation",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Property Allocation",
+  "is_active": 1,
+  "modified": "2022-10-12 21:54:33.200546",
+  "name": "Property Allocation",
+  "override_status": 0,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 1,
+  "states": [
+   {
+    "allow_edit": "All",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Allocation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Draft",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "All",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Allocation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Rejected",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "All",
+    "doc_status": "1",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Allocation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Allocated",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Kifaru Admin",
+    "doc_status": "2",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Property Allocation",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Revoked",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Allocate",
+    "allow_self_approval": 1,
+    "allowed": "All",
+    "condition": null,
+    "next_state": "Allocated",
+    "parent": "Property Allocation",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft"
+   },
+   {
+    "action": "Revoke",
+    "allow_self_approval": 1,
+    "allowed": "Kifaru Admin",
+    "condition": null,
+    "next_state": "Revoked",
+    "parent": "Property Allocation",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Allocated"
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "All",
+    "condition": null,
+    "next_state": "Rejected",
+    "parent": "Property Allocation",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Draft"
+   }
+  ],
+  "workflow_name": "Property Allocation",
+  "workflow_state_field": "workflow_state"
+ }
+]
