@@ -7,8 +7,9 @@ import urllib.parse
 @frappe.whitelist(allow_guest=True)
 def custom(random_string=""):
     x = str(frappe.request.data, 'utf-8')
-    data = urllib.parse.parse_qs(str(x))
-    make_lead_from_website_checked(data)
+    if x:
+        data = urllib.parse.parse_qs(str(x))
+        make_lead_from_website_checked(data)
 
 
 def make_lead_from_website_checked(data):
