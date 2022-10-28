@@ -25,4 +25,5 @@ def make_lead_from_website_checked(data):
     doc.mobile_no = data_items["phone"]
     doc.lead_owner = ""
     doc.lead_request = data_items["message"] + site_visit
+    doc.source = "Website"
     doc.insert(ignore_permissions=True, ignore_mandatory=True)
