@@ -55,13 +55,14 @@
    "fieldname": "results",
    "fieldtype": "Text Editor",
    "label": "Results",
+   "no_copy": 1,
    "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-11-02 11:35:31.008303",
+ "modified": "2023-11-02 12:17:19.071547",
  "modified_by": "Administrator",
  "module": "Kifaru",
  "name": "Airtime Distribution",
