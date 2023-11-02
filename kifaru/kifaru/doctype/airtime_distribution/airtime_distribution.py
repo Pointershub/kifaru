@@ -11,7 +11,7 @@ import base64
 
 
 class AirtimeDistribution(Document):
-	def before_save(self):
+	def before_submit(self):
 		if self.get("items"):
 			recipients = []
 			for d in self.get("items"):
@@ -32,10 +32,15 @@ def send_airtime(recipients):
 		"recipients": recipients
 	}
 
+	""" pick api_key and api_token from single document airtime settings"""
+
+	api_key = frappe.db.get_single_value("Airtime Settings", "api_key")
+	api_token = frappe.db.get_single_value("Airtime Settings", "api_token")
+
 	headers = {
 		'Content-Type': 'application/json',
-		'App-Key': 'f4318bee-a8f7-4627-aeca-2366bd179c45',
-		'App-Token': 'M5aX005MP9k7ntmZKOh1fWG2GfCSvkjm'
+		'App-Key': str(api_key),
+		'App-Token': str(api_token)
 	}
 
 	URL = "https://quicksms.advantasms.com/api/v3/airtime/send"
